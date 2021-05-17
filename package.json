@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Personalized reviews of the Musou genre.",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/michael-stubbs/pursuit-of-lu-bu.git"
@@ -15,18 +12,37 @@
   "bugs": {
     "url": "https://github.com/michael-stubbs/pursuit-of-lu-bu/issues"
   },
-  "homepage": "https://github.com/michael-stubbs/pursuit-of-lu-bu#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "concurrently": "^6.1.0",
+    "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "server": "nodemon app.js",
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "start": "concurrently \"npm run react-start\" \"npm run server\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
