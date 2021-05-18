@@ -14,7 +14,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/reviews", db);
+app.use("/", db);
 
 app.listen(port, () => console.log("server is listening on " + port));
 

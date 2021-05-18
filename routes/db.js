@@ -3,7 +3,7 @@ const key = require("../keys");
 const express = require("express");
 const router = express.Router();
 
-let reviews = [];
+let reviews;
 const uri =
   "mongodb+srv://stubbs:" +
   key +
@@ -26,7 +26,7 @@ client.connect((err) => {
   // items.forEach((i) => reviews.push());
 });
 
-router.get("/", function (req, res) {
+router.get("/reviews", function (req, res) {
   res.send(reviews);
 });
 
