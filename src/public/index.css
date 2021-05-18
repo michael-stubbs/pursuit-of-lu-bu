@@ -22,7 +22,7 @@ header {
 }
 
 .gameCard:hover {
-  -webkit-filter: brightness(70%);
+  -webkit-filter: brightness(60%);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -33,7 +33,7 @@ header {
 .gameImage {
   border-radius: 0.2rem;
   max-width: 100%;
-  width: 300px;
+  width: 400px;
 }
 
 .cardFooter {
@@ -47,4 +47,13 @@ header {
 .cardFooter h3,
 p {
   margin: 0.5rem;
+}
+
+.dialog-top {
+  display: flex;
+  justify-content: space-between;
+}
+.close-button {
+  color: grey;
+  margin-right: 0.3rem;
 }
