@@ -1,7 +1,7 @@
-const MongoClient = require("mongodb").MongoClient;
-const key = require("../keys");
 const express = require("express");
 const router = express.Router();
+const MongoClient = require("mongodb").MongoClient;
+const key = require("../keys");
 
 let reviews;
 const uri =
@@ -22,8 +22,6 @@ client.connect((err) => {
       reviews = items;
     })
     .then(() => client.close());
-
-  // items.forEach((i) => reviews.push());
 });
 
 router.get("/reviews", function (req, res) {
