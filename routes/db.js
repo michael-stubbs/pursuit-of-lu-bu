@@ -1,6 +1,9 @@
 const MongoClient = require("mongodb").MongoClient;
-import key from "../keys";
+const key = require("../keys");
+const express = require("express");
+const router = express.Router();
 
+let reviews = [];
 const uri =
   "mongodb+srv://stubbs:" +
   key +
@@ -9,8 +12,22 @@ const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 client.connect((err) => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
+  const collection = client.db("POLB").collection("Reviews");
+  collection
+    .find({})
+    .toArray()
+    .then((items) => {
+      reviews = items;
+    })
+    .then(() => client.close());
+
+  // items.forEach((i) => reviews.push());
 });
+
+router.get("/", function (req, res) {
+  res.send(reviews);
+});
+
+module.exports = router;
