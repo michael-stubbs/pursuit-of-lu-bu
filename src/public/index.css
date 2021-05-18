@@ -19,14 +19,11 @@ header {
 
 .gameCard {
   margin: 1rem;
+  position: relative;
 }
 
-.gameCard:hover {
-  -webkit-filter: brightness(60%);
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
+.toGrey:hover {
+  filter: brightness(60%);
   transition: all 0.3s ease;
 }
 
@@ -56,4 +53,10 @@ p {
 .close-button {
   color: grey;
   margin-right: 0.3rem;
+}
+
+.review-button {
+  position: absolute;
+  top: 15em;
+  left: 10em;
 }

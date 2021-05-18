@@ -25,8 +25,8 @@ export default function ReviewDialog(props) {
   };
 
   return (
-    <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+    <div style={props.style} className="review-button">
+      <Button variant="contained" color="primary" onClick={handleClickOpen}>
         REVIEW
       </Button>
       <Dialog
