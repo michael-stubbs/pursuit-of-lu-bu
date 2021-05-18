@@ -1,3 +1,50 @@
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: #1f454c;
+}
+
+header {
+  align-items: center;
+  background-color: #1f344c;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gameCard {
+  margin: 1rem;
+}
+
+.gameCard:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.gameImage {
+  border-radius: 0.2rem;
+  max-width: 100%;
+  width: 300px;
+}
+
+.cardFooter {
+  background-color: #f1654c;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+.cardFooter h3,
+p {
+  margin: 0.5rem;
 }

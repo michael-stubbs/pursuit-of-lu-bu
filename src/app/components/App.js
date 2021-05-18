@@ -4,9 +4,11 @@ import Header from "./Header";
 function App() {
   return (
     <div className="app">
-      <Header />,
-      <Game />,
-      <Game />,
+      <Header />
+      <div className="game-container">
+        <Game />
+        <Game />
+      </div>
     </div>
   );
 }
