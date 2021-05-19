@@ -7,6 +7,8 @@ class App extends Component {
     super();
     this.state = { reviews: [] };
   }
+
+  // Get review data from Express/MongoDB
   componentDidMount() {
     // This should change for deployment to /reviews
     const url = new URL("http://localhost:3001");

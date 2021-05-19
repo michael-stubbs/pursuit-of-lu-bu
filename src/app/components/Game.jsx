@@ -4,6 +4,7 @@ import Review from "./Review";
 function Game(props) {
   const [style, setStyle] = useState({ visibility: "collapse" });
 
+  // Dynamic colors for ratings
   const setRatingClass = (rate) => {
     if (rate >= 70) {
       return "rating-main green";
@@ -15,6 +16,7 @@ function Game(props) {
   };
 
   return (
+    // Only show review button when mouse enters
     <div
       className="gameCard toFilter"
       onMouseEnter={(e) => {

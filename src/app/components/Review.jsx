@@ -23,6 +23,7 @@ export default function ReviewDialog(props) {
     setOpen(false);
   };
 
+  // Dynamic rating colors
   const setRatingClass = (rate) => {
     if (rate >= 70) {
       return "rating green";
