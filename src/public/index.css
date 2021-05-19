@@ -22,8 +22,8 @@ header {
   position: relative;
 }
 
-.toGrey:hover {
-  filter: brightness(60%);
+.toFilter:hover > .cardbody {
+  filter: brightness(40%);
   transition: all 0.3s ease;
 }
 

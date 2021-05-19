@@ -6,7 +6,7 @@ function Game(props) {
 
   return (
     <div
-      className="gameCard"
+      className="gameCard toFilter"
       onMouseEnter={(e) => {
         setStyle({ visibility: "visible" });
       }}
@@ -14,16 +14,18 @@ function Game(props) {
         setStyle({ visibility: "collapse" });
       }}
     >
-      <img
-        className="gameImage toGrey"
-        src="https://cdn.thegamesdb.net/images/original/boxart/front/29386-1.jpg"
-        alt=""
-      />
-      <Review style={style} />
-      <div className="cardFooter">
-        <h3 className="gameTitle">Dynasty Warriors 8 XL</h3>
-        <p className="rating">8/10</p>
+      <div className="cardbody">
+        <img
+          className="gameImage"
+          src="https://cdn.thegamesdb.net/images/original/boxart/front/29386-1.jpg"
+          alt=""
+        />
+        <div className="cardFooter">
+          <h3 className="gameTitle">Dynasty Warriors 8 XL</h3>
+          <p className="rating">8/10</p>
+        </div>
       </div>
+      <Review style={style} />
     </div>
   );
 }
