@@ -8,14 +8,13 @@ class App extends Component {
     this.state = { reviews: [] };
   }
   componentDidMount() {
+    // This should change for deployment to /reviews
     const url = new URL("http://localhost:3001");
     fetch(url + "reviews")
       .then((res) => {
-        console.log(res);
         return res.json();
       })
       .then((reviews) => {
-        console.log(reviews);
         this.setState({ reviews });
       });
   }

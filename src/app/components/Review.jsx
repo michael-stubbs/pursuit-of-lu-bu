@@ -23,6 +23,16 @@ export default function ReviewDialog(props) {
     setOpen(false);
   };
 
+  const setRatingClass = (rate) => {
+    if (rate >= 70) {
+      return "rating green";
+    } else if (rate >= 40) {
+      return "rating orange";
+    } else {
+      return "rating red";
+    }
+  };
+
   return (
     <div style={props.style} className="review-button">
       <Button
@@ -39,11 +49,16 @@ export default function ReviewDialog(props) {
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
-        aria-labelledby="alert-dialog-slide-title"
-        aria-describedby="alert-dialog-slide-description"
+        aria-labelledby="review-title"
+        aria-describedby="review-content"
       >
         <div className="dialog-top">
-          <DialogTitle id="alert-dialog-slide-title">{props.title}</DialogTitle>
+          <DialogTitle id="review-title">
+            {props.title}{" "}
+            <div className={setRatingClass(props.rating)}>
+              {props.rating} / 100
+            </div>
+          </DialogTitle>
           <IconButton
             aria-label="close"
             className="close-button"
@@ -52,11 +67,13 @@ export default function ReviewDialog(props) {
             <CloseIcon />
           </IconButton>
         </div>
-        <DialogContent dividers>
-          <DialogContentText id="alert-dialog-slide-description">
-            {props.body}
-          </DialogContentText>
-        </DialogContent>
+        <div className="dialog-body">
+          <DialogContent dividers>
+            <DialogContentText id="review-content">
+              {props.body}
+            </DialogContentText>
+          </DialogContent>
+        </div>
       </Dialog>
     </div>
   );

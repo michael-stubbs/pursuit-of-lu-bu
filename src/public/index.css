@@ -12,6 +12,7 @@ header {
   justify-content: space-evenly;
 }
 
+/* Game cards */
 .game-container {
   display: flex;
   flex-wrap: wrap;
@@ -46,10 +47,14 @@ p {
   margin: 0.5rem;
 }
 
+/* Reviews */
 .dialog-top {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  background-color: #9db8d7;
 }
+
 .close-button {
   color: grey;
   margin-right: 0.3rem;
@@ -57,8 +62,14 @@ p {
 
 .review-button {
   position: absolute;
-  top: 15em;
+  top: 10em;
   left: 7em;
+}
+
+#review-content {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  line-height: 2rem;
 }
 
 .MuiButton-containedSizeLarge {
@@ -67,4 +78,31 @@ p {
   border-radius: 1rem !important;
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+/* Rating scores */
+.rating-main {
+  font-weight: bold;
+  background-color: #6f392f;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.rating {
+  position: absolute;
+  padding: 0.3rem 0.5rem;
+  background-color: #687a8f;
+  border-radius: 5px;
+  right: 7rem;
+  top: 0.8rem;
+}
+
+.green {
+  color: greenyellow;
+}
+.orange {
+  color: orange;
+}
+.red {
+  color: red;
 }
