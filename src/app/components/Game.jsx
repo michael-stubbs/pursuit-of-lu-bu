@@ -15,17 +15,13 @@ function Game(props) {
       }}
     >
       <div className="cardbody">
-        <img
-          className="gameImage"
-          src="https://cdn.thegamesdb.net/images/original/boxart/front/29386-1.jpg"
-          alt=""
-        />
+        <img className="gameImage" src={props.img} alt="" />
         <div className="cardFooter">
-          <h3 className="gameTitle">Dynasty Warriors 8 XL</h3>
-          <p className="rating">8/10</p>
+          <h3 className="gameTitle">{props.title}</h3>
+          <p className="rating">{props.rating}</p>
         </div>
       </div>
-      <Review style={style} />
+      <Review style={style} body={props.body} title={props.title} />
     </div>
   );
 }

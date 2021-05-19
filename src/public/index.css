@@ -58,5 +58,13 @@ p {
 .review-button {
   position: absolute;
   top: 15em;
-  left: 10em;
+  left: 7em;
+}
+
+.MuiButton-containedSizeLarge {
+  padding: 1rem 2rem !important;
+  font-size: 2rem !important;
+  border-radius: 1rem !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
