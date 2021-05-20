@@ -4,6 +4,7 @@ const router = express.Router();
 const MongoClient = require("mongodb").MongoClient;
 
 let reviews;
+console.log(process.env.MONGO_USER);
 const login = process.env.MONGO_USER + ":" + process.env.MONG_PASS;
 const uri =
   "mongodb+srv://" +
