@@ -9,6 +9,8 @@ function Socials() {
         variant="contained"
         color="primary"
         href="https://github.com/michael-stubbs"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Github
       </Button>
@@ -16,6 +18,8 @@ function Socials() {
         variant="contained"
         color="primary"
         href="https://twitter.com/__stubbs__"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Twitter
       </Button>
