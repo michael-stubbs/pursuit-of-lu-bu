@@ -47,6 +47,13 @@ export default function Suggestion() {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log(JSON.stringify(values, null, 1));
+      fetch("http://localhost:3001/suggest", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values, null, 1),
+      });
     },
   });
 
@@ -69,11 +76,7 @@ export default function Suggestion() {
       >
         <DialogTitle id="form-dialog">Suggest Game</DialogTitle>
         {/* Change on deployment to /suggest */}
-        <form
-          action="http://localhost:3001/suggest"
-          method="POST"
-          onSubmit={formik.handleSubmit}
-        >
+        <form onSubmit={formik.handleSubmit}>
           <DialogContent>
             <DialogContentText>
               Suggest a Musou game for me to review! Please limit these to games

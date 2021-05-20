@@ -29,8 +29,8 @@ router.get("/reviews", function (req, res) {
 
 router.post("/suggest", function (req, res) {
   const collection = client.db("POLB").collection("Suggestions");
-  console.log(req.body);
-  collection.insertOne(req.body).then(() => client.close());
+  console.log("Submission received");
+  collection.insertOne(req.body);
 });
 
 // Clean up MongoDB connection on close
