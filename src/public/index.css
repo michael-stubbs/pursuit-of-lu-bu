@@ -68,8 +68,8 @@ p {
 }
 
 #review-content {
-  color: #1a1a1a;
-  font-size: 1.1rem;
+  color: #383838;
+  font-size: 1.07rem;
   line-height: 2rem;
 }
 
@@ -113,6 +113,16 @@ p {
 }
 
 /* Media Breakpoints */
+@media only screen and (min-width: 1670px) {
+  .gameImage {
+    width: 500px;
+  }
+
+  .review-button {
+    top: 14rem;
+    left: 10rem;
+  }
+}
 
 @media only screen and (max-width: 970px) {
   header {
