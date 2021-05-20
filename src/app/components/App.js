@@ -10,9 +10,7 @@ class App extends Component {
 
   // Get review data from Express/MongoDB
   componentDidMount() {
-    // This should change for deployment to /reviews
-    const url = new URL("http://localhost:3001");
-    fetch(url + "reviews")
+    fetch("/reviews")
       .then((res) => {
         return res.json();
       })

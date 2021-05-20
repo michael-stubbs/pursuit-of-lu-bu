@@ -7,15 +7,22 @@ const db = require("./routes/db");
 
 const app = express();
 
-// app.use(express.static(__dirname + "/build"));
+app.use(express.static(path.join(__dirname + "/build")));
 
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'", "fonts.gstatic.com", "fonts.googleapis.com"],
+      scriptSrc: ["'self'"],
+    },
+  })
+);
+
 app.use("/", db);
 
 app.listen(port, () => console.log("server is listening on " + port));
-
-//Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass

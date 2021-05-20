@@ -1,12 +1,13 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const router = express.Router();
 const MongoClient = require("mongodb").MongoClient;
-const key = require("../keys");
 
 let reviews;
+const login = process.env.MONGO_USER + ":" + process.env.MONG_PASS;
 const uri =
-  "mongodb+srv://stubbs:" +
-  key +
+  "mongodb+srv://" +
+  login +
   "@cluster0.epqz8.mongodb.net/Cluster0?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,

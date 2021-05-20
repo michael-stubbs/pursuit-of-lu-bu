@@ -46,8 +46,7 @@ export default function Suggestion() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      /* Change on deployment to /suggest */
-      fetch("http://localhost:3001/suggest", {
+      fetch("/suggest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
