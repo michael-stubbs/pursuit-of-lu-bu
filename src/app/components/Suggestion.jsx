@@ -35,7 +35,7 @@ export default function Suggestion() {
   };
 
   const handleCloseSubmit = (e) => {
-    if (formik.touched.title && Boolean(formik.errors.title)) {
+    if (formik.touched.title && Boolean(formik.errors.title) === false) {
       setOpen(false);
     }
   };
