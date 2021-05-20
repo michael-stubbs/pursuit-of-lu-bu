@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -45,9 +46,15 @@ export default function Suggestion() {
 
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={handleClickOpen}>
-        Suggest Game
-      </Button>
+      <ButtonGroup
+        variant="contained"
+        color="primary"
+        className="suggest-container"
+      >
+        <Button variant="contained" color="primary" onClick={handleClickOpen}>
+          Suggest Game
+        </Button>
+      </ButtonGroup>
       <Dialog
         open={open}
         onClose={handleClose}

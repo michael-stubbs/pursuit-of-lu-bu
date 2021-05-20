@@ -5,10 +5,8 @@ import Suggestion from "./Suggestion";
 
 function Socials() {
   return (
-    <ButtonGroup variant="contained" color="primary" disableElevation>
+    <ButtonGroup variant="contained" color="primary">
       <Button
-        variant="contained"
-        color="primary"
         href="https://github.com/michael-stubbs"
         target="_blank"
         rel="noopener noreferrer"
@@ -17,8 +15,6 @@ function Socials() {
       </Button>
       <Suggestion />
       <Button
-        variant="contained"
-        color="primary"
         href="https://twitter.com/__stubbs__"
         target="_blank"
         rel="noopener noreferrer"
