@@ -23,7 +23,8 @@ const validationSchema = yup.object({
     .required("Please enter a title!"),
 });
 
-export default function Suggestion() {
+function Suggestion() {
+  // Material-UI dialog state
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -34,12 +35,14 @@ export default function Suggestion() {
     setOpen(false);
   };
 
+  // Prevent closing on invalidation
   const handleCloseSubmit = (e) => {
     if (formik.touched.title && Boolean(formik.errors.title) === false) {
       setOpen(false);
     }
   };
 
+  // Set formik behaviors
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -107,3 +110,5 @@ export default function Suggestion() {
     </div>
   );
 }
+
+export default Suggestion;

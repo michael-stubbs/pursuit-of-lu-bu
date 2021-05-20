@@ -12,7 +12,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Grow ref={ref} {...props} />;
 });
 
-export default function ReviewDialog(props) {
+function ReviewDialog(props) {
+  // Material-UI dialog state control
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -79,3 +80,5 @@ export default function ReviewDialog(props) {
     </div>
   );
 }
+
+export default ReviewDialog;

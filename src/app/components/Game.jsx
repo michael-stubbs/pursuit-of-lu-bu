@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Review from "./Review";
 
 function Game(props) {
+  // State for hover button visibility
   const [style, setStyle] = useState({ visibility: "collapse" });
 
   // Dynamic colors for ratings

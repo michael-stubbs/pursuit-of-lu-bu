@@ -3,17 +3,21 @@ const router = express.Router();
 const MongoClient = require("mongodb").MongoClient;
 
 let reviews;
+
+// Set MongoDB login to Heroku config
 const login = process.env.MONGO;
 console.log(login);
 const uri =
   "mongodb+srv://" +
   login +
   "@cluster0.epqz8.mongodb.net/Cluster0?retryWrites=true&w=majority";
+
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
+// Connect and pull all reviews into an array
 client.connect((err) => {
   console.log(err);
   const collection = client.db("POLB").collection("Reviews");
@@ -34,8 +38,5 @@ router.post("/suggest", function (req, res) {
   console.log("Submission received");
   collection.insertOne(req.body);
 });
-
-// Clean up MongoDB connection on close
-// process.on("SIGINT", () => client.close());
 
 module.exports = router;
