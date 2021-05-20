@@ -46,7 +46,7 @@ export default function Suggestion() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log(JSON.stringify(values, null, 1));
+      /* Change on deployment to /suggest */
       fetch("http://localhost:3001/suggest", {
         method: "POST",
         headers: {
@@ -75,7 +75,6 @@ export default function Suggestion() {
         TransitionComponent={Transition}
       >
         <DialogTitle id="form-dialog">Suggest Game</DialogTitle>
-        {/* Change on deployment to /suggest */}
         <form onSubmit={formik.handleSubmit}>
           <DialogContent>
             <DialogContentText>
