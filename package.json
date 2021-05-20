@@ -19,11 +19,13 @@
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "formik": "^2.2.7",
     "helmet": "^4.6.0",
     "mongodb": "^3.6.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

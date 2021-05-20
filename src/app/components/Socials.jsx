@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Suggestion from "./Suggestion";
 
 function Socials() {
   return (
-    <ButtonGroup variant="contained" color="primary">
+    <ButtonGroup variant="contained" color="primary" disableElevation>
       <Button
         variant="contained"
         color="primary"
@@ -14,6 +15,7 @@ function Socials() {
       >
         Github
       </Button>
+      <Suggestion />
       <Button
         variant="contained"
         color="primary"

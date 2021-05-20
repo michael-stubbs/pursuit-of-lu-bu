@@ -20,12 +20,20 @@ client.connect((err) => {
     .toArray()
     .then((items) => {
       reviews = items;
-    })
-    .then(() => client.close());
+    });
 });
 
 router.get("/reviews", function (req, res) {
   res.send(reviews);
 });
+
+router.post("/suggest", function (req, res) {
+  const collection = client.db("POLB").collection("Suggestions");
+  console.log(req.body);
+  collection.insertOne(req.body).then(() => client.close());
+});
+
+// Clean up MongoDB connection on close
+process.on("SIGINT", () => client.close());
 
 module.exports = router;
