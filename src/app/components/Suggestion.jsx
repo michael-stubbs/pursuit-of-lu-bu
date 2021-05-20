@@ -34,6 +34,12 @@ export default function Suggestion() {
     setOpen(false);
   };
 
+  const handleCloseSubmit = (e) => {
+    if (formik.touched.title && Boolean(formik.errors.title)) {
+      setOpen(false);
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -91,7 +97,7 @@ export default function Suggestion() {
             <Button onClick={handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={handleClose} color="primary" type="submit">
+            <Button onClick={handleCloseSubmit} color="primary" type="submit">
               Submit
             </Button>
           </DialogActions>
