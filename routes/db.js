@@ -6,7 +6,6 @@ let reviews;
 
 // Set MongoDB login to Heroku config
 const login = process.env.MONGO;
-console.log(login);
 const uri =
   "mongodb+srv://" +
   login +

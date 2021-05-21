@@ -38,7 +38,8 @@
     "server": "node app.js",
     "react-start": "react-scripts start",
     "react-build": "react-scripts build",
-    "start": "concurrently \"npm run react-build\" \"npm run server\""
+    "start": "npm run server",
+    "build": "concurrently \"npm run react-build\" \"npm run server\""
   },
   "browserslist": {
     "production": [
