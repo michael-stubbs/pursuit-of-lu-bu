@@ -19,7 +19,6 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
-    "concurrently": "^6.1.0",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
@@ -39,7 +38,7 @@
     "react-start": "react-scripts start",
     "react-build": "react-scripts build",
     "start": "npm run server",
-    "build": "concurrently \"npm run react-build\" \"npm run server\""
+    "build": "npm run react-build"
   },
   "browserslist": {
     "production": [
