@@ -4,12 +4,13 @@ const MongoClient = require("mongodb").MongoClient;
 
 let reviews;
 
-// Set MongoDB login to Heroku config
+// Set MongoDB login to Vercel config
 const login = process.env.MONGO;
 const uri =
   "mongodb+srv://" +
   login +
   "@cluster0.epqz8.mongodb.net/Cluster0?retryWrites=true&w=majority";
+console.log(uri);
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
