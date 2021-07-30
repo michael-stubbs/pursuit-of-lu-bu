@@ -1,10 +1,6 @@
 {
   "name": "pursuit-of-lu-bu",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.16.1",
-    "npm": "7.11.1"
-  },
   "description": "Personalized reviews of the Musou genre.",
   "main": "app.js",
   "repository": {
