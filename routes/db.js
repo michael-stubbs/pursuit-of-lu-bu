@@ -32,6 +32,8 @@ client.connect((err) => {
 });
 
 router.get("/reviews", function (req, res) {
+  console.log(login);
+  console.log(uri);
   res.send(reviews);
 });
 
