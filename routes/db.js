@@ -6,8 +6,7 @@ let reviews;
 
 // Set MongoDB login to Vercel config
 
-// let login = process.env.MONGO;
-let login = "stubbs:Royalqk1!";
+let login = process.env.MONGO;
 let uri =
   "mongodb+srv://" +
   login +
