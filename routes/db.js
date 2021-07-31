@@ -33,8 +33,7 @@ client.connect((err) => {
 });
 
 router.get("/reviews", function (req, res) {
-  // res.send(reviews);
-  res.send(uri);
+  res.send(reviews);
 });
 
 router.post("/suggest", function (req, res) {
