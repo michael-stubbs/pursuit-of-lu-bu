@@ -6,7 +6,8 @@ let reviews;
 
 // Set MongoDB login to Vercel config
 
-let login = process.env.MONGO;
+// let login = process.env.MONGO;
+let login = "stubbs:Royalqk1!";
 let uri =
   "mongodb+srv://" +
   login +
@@ -32,7 +33,8 @@ client.connect((err) => {
 });
 
 router.get("/reviews", function (req, res) {
-  res.send(reviews);
+  // res.send(reviews);
+  res.send(uri);
 });
 
 router.post("/suggest", function (req, res) {
