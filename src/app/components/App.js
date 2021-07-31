@@ -12,6 +12,7 @@ class App extends Component {
   componentDidMount() {
     fetch("/reviews")
       .then((res) => {
+        console.log(res);
         return res.json();
       })
       .then((reviews) => {
