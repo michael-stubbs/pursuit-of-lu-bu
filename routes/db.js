@@ -5,14 +5,11 @@ const MongoClient = require("mongodb").MongoClient;
 let reviews;
 
 // Set MongoDB login to Vercel config
-
 let login = process.env.MONGO;
 let uri =
   "mongodb+srv://" +
   login +
   "@cluster0.epqz8.mongodb.net/Cluster0?retryWrites=true&w=majority";
-console.log(login);
-console.log(uri);
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
